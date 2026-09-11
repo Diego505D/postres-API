@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Postres Naturales</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="min-h-screen bg-black text-white">
+
+
+    <!-- Encabezado -->
+    <header class="px-4 py-10 text-center sm:px-6 sm:py-12">
+
+        <p class="mb-3 text-sm uppercase tracking-[0.4em] text-amber-400">
+            Repostería artesanal
+        </p>
+
+        <h1 class="text-4xl font-bold sm:text-5xl md:text-6xl">
+            POSTRES NATURALES
+        </h1>
+
+        <p class="mx-auto mt-4 max-w-xl text-lg text-gray-400">
+            Dentro de cada postre hay esfuerzo.
+        </p>
+
+    </header>
+
+
+    <!-- Formulario -->
+    <section class="mx-auto w-full max-w-2xl px-4 sm:px-6">
+
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-2xl">
+
+            <h2 class="mb-6 text-2xl font-bold">
+                Crear postre
+            </h2>
+
+
+            <form id="formPostre" class="space-y-5">
+
+
+                <!-- Nombre -->
+                <div>
+
+                    <label class="mb-2 block text-sm text-gray-300">
+                        Nombre del postre
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Ej: Tres Leches"
+                        class="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none transition focus:border-amber-400"
+                    >
+
+                </div>
+
+
+                <!-- Tipo -->
+                <div>
+
+                    <label class="mb-2 block text-sm text-gray-300">
+                        Tipo de postre *
+                    </label>
+
+                    <select
+                        id="categoria"
+                        class="w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-3 text-lg text-white outline-none focus:border-amber-400"
+                    >
+
+                        <option value="">
+                            Selecciona un tipo de postre
+                        </option>
+
+                        <option value="Pastel">
+                            Pastel
+                        </option>
+
+                        <option value="Cheesecake">
+                            Cheesecake
+                        </option>
+
+                        <option value="Flan">
+                            Flan
+                        </option>
+
+                        <option value="Postre frío">
+                            Postre frío
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Precio -->
+                <div>
+
+                    <label class="mb-2 block text-sm text-gray-300">
+                        Precio *
+                    </label>
+
+                    <input
+                        type="number"
+                        id="precio"
+                        min="1"
+                        placeholder="Ej: 10000"
+                        class="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none focus:border-amber-400"
+                    >
+
+                </div>
+
+
+                <!-- Mensaje -->
+                <p
+                    id="mensaje"
+                    class="hidden rounded-xl px-4 py-3 text-sm"
+                ></p>
+
+
+                <!-- Botón -->
+                <button
+                    type="submit"
+                    class="w-full rounded-xl bg-amber-400 px-5 py-3 font-bold text-black transition hover:bg-amber-300"
+                >
+                    Agregar postre
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Lista de postres -->
+    <main class="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+
+
+        <div class="mb-8 flex items-center justify-between">
+
+            <div>
+
+                <p class="text-sm uppercase tracking-widest text-amber-400">
+                    Nuestra selección
+                </p>
+
+                <h2 class="mt-2 text-3xl font-bold">
+                    Postres
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- Aquí aparecen las tarjetas -->
+        <div
+            id="listaPostres"
+            class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
+        </div>
+
+    </main>
+
+
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>
